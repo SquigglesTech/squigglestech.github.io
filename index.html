@@ -3,73 +3,277 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SquigglesTech LLC</title>
+  <title>SquigglesTech LLC</title>
   <style>
+    :root {
+      --bg: #faf8f3;
+      --card: #ffffff;
+      --text: #1f2933;
+      --muted: #5f6c72;
+      --sage: #6f8f72;
+      --olive: #556b3f;
+      --cream: #fffaf0;
+      --border: #e4dfd2;
+      --shadow: 0 16px 40px rgba(31, 41, 51, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background: #fafafa;
-      color: #222;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(180deg, #fffaf0 0%, #faf8f3 45%, #ffffff 100%);
+      color: var(--text);
       min-height: 100vh;
-      padding: 40px 20px;
     }
+
     header {
-      text-align: center;
-      margin-bottom: 40px;
+      padding: 28px 22px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.82);
     }
-    header img {
-      max-width: 280px;
+
+    .nav {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .brand img {
+      width: 58px;
       height: auto;
     }
-    h1 {
-      margin-top: 20px;
-      color: #333;
-      font-size: 2rem;
+
+    .brand span {
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
     }
-    section {
-      max-width: 800px;
-      text-align: center;
-      line-height: 1.6;
-    }
-    footer {
-      margin-top: 50px;
-      font-size: 0.9rem;
-      color: #555;
-    }
-    a {
-      color: #007aff;
+
+    nav a {
+      color: var(--muted);
       text-decoration: none;
+      margin-left: 18px;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: var(--olive);
+    }
+
+    main {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 54px 22px 36px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 34px 0 50px;
+    }
+
+    .hero-logo {
+      max-width: 320px;
+      width: 80%;
+      height: auto;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.1rem, 5vw, 4rem);
+      line-height: 1.05;
+      color: var(--text);
+    }
+
+    .subtitle {
+      margin: 18px auto 0;
+      max-width: 680px;
+      color: var(--muted);
+      font-size: 1.12rem;
+      line-height: 1.7;
+    }
+
+    .section-title {
+      text-align: center;
+      margin: 26px 0 22px;
+      font-size: 2rem;
+      color: var(--text);
+    }
+
+    .apps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 22px;
+      margin-top: 18px;
+    }
+
+    .app-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .app-card img {
+      width: 100%;
+      max-height: 210px;
+      object-fit: contain;
+      border-radius: 20px;
+      background: var(--cream);
+      margin-bottom: 20px;
+    }
+
+    .app-card h3 {
+      margin: 0 0 10px;
+      font-size: 1.55rem;
+      color: var(--text);
+    }
+
+    .app-card p {
+      margin: 0 0 22px;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--olive);
+      color: #ffffff;
+      text-decoration: none;
+      padding: 13px 20px;
+      border-radius: 999px;
+      font-weight: 700;
+      box-shadow: 0 10px 22px rgba(85, 107, 63, 0.22);
+    }
+
+    .button:hover {
+      background: var(--sage);
+    }
+
+    .mission {
+      margin: 44px auto 0;
+      background: rgba(255, 255, 255, 0.75);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 26px;
+      text-align: center;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    footer {
+      margin-top: 58px;
+      padding: 28px 22px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.92rem;
+      background: #ffffff;
+    }
+
+    footer a {
+      color: var(--olive);
+      text-decoration: none;
+      font-weight: 600;
+      margin: 0 8px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .nav {
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 0 8px;
+      }
+
+      main {
+        padding-top: 34px;
+      }
+
+      .app-card {
+        padding: 22px;
+      }
     }
   </style>
 </head>
 
 <body>
   <header>
-    <img src="https://raw.githubusercontent.com/SquigglesTech/squigglestech.github.io/main/assets/squiggles3.png" 
-         alt="SquigglesTech LLC Logo" />
-    <h1>Welcome to SquigglesTech LLC</h1>
+    <div class="nav">
+      <a class="brand" href="index.html">
+        <img src="assets/squiggles3.png" alt="SquigglesTech LLC logo" />
+        <span>SquigglesTech LLC</span>
+      </a>
+
+      <nav>
+        <a href="#apps">Our Apps</a>
+        <a href="privacy-policy.html">Privacy</a>
+        <a href="delete-account.html">Delete Data</a>
+      </nav>
+    </div>
   </header>
 
-  <section>
-    <p>
-      SquigglesTech LLC is a Texas‑based technology company focused on
-      delivering clean, innovative mobile solutions — including the
-      <strong>My Kitchen Pantry</strong> app that simplifies pantry
-      tracking, shopping, and recipe discovery.
-    </p>
-    <p>
-      Our mission is to merge design and function through thoughtful code and
-      seamless user experiences.
-    </p>
-  </section>
+  <main>
+    <section class="hero">
+      <img class="hero-logo" src="assets/squiggles3.png" alt="SquigglesTech LLC logo" />
+      <h1>Simple, helpful apps for everyday life.</h1>
+      <p class="subtitle">
+        SquigglesTech LLC is a Texas-based app company focused on practical,
+        thoughtfully designed tools that help people stay organized at home.
+      </p>
+    </section>
+
+    <section id="apps">
+      <h2 class="section-title">Our Apps</h2>
+
+      <div class="apps-grid">
+        <article class="app-card">
+          <img src="assets/AppMain.png" alt="My Kitchen Pantry app preview" />
+          <h3>My Kitchen Pantry</h3>
+          <p>
+            Track pantry items, plan meals, manage shopping lists, organize recipes,
+            and reduce food waste with a clean, simple kitchen companion app.
+          </p>
+          <a class="button" href="my-kitchen-pantry.html">View My Kitchen Pantry</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="mission">
+      <p>
+        Our mission is to merge clean design and useful functionality through
+        thoughtful code, simple navigation, and everyday tools that make life easier.
+      </p>
+    </section>
+  </main>
 
   <footer>
-    © 2026 SquigglesTech LLC  |  Contact: 
-    <a href="mailto:info@squigglestech.com">info@squigglestech.com</a>
+    © 2026 SquigglesTech LLC |
+    <a href="mailto:support@squigglestech.com">support@squigglestech.com</a> |
+    <a href="privacy-policy.html">Privacy Policy</a> |
+    <a href="delete-account.html">Delete Account/Data</a>
   </footer>
 </body>
 </html>
