@@ -3,7 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Kitchen Pantry | SquigglesTech LLC</title>
+  <title>My Kitchen Pantry – Pantry Organizer & Meal Planner App for Android</title>
+  <meta name="description" content="My Kitchen Pantry helps you track pantry inventory, plan meals, build shopping lists, manage recipes, and reduce food waste. Free to download on Google Play." />
+  <meta name="keywords" content="pantry organizer app, meal planning app, shopping list app, food waste app, kitchen organizer, Android pantry app, recipe manager, expiration date tracker" />
+  <meta name="author" content="SquigglesTech LLC" />
+
+  <!-- Open Graph (for social sharing previews) -->
+  <meta property="og:title" content="My Kitchen Pantry – Stop Wasting Food. Start Eating Smarter." />
+  <meta property="og:description" content="Track your pantry, plan meals, build shopping lists, and reduce food waste. Free on Google Play." />
+  <meta property="og:image" content="https://squigglestech.com/assets/Banner1024x500.png" />
+  <meta property="og:url" content="https://squigglestech.com/my-kitchen-pantry.html" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
   <style>
     :root {
       --bg: #faf8f3;
@@ -19,9 +31,7 @@
       --shadow-strong: 0 18px 46px rgba(31, 41, 51, 0.12);
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -31,10 +41,15 @@
       min-height: 100vh;
     }
 
+    /* ── HEADER ── */
     header {
       padding: 24px 28px;
       border-bottom: 1px solid var(--border);
       background: rgba(255, 255, 255, 0.9);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(8px);
     }
 
     .nav {
@@ -54,10 +69,7 @@
       color: var(--text);
     }
 
-    .brand img {
-      width: 54px;
-      height: auto;
-    }
+    .brand img { width: 54px; height: auto; }
 
     .brand span {
       font-size: 1.08rem;
@@ -73,20 +85,45 @@
       font-weight: 600;
     }
 
-    nav a:hover {
-      color: var(--olive);
-    }
+    nav a:hover { color: var(--olive); }
 
+    /* ── MAIN ── */
     main {
       max-width: 1440px;
       margin: 0 auto;
       padding: 48px 34px 56px;
     }
 
+    /* ── HERO ── */
     .hero {
       text-align: center;
       padding: 18px 0 92px;
     }
+
+    .hero-eyebrow {
+      display: inline-block;
+      background: var(--soft-green);
+      color: var(--olive);
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 999px;
+      margin-bottom: 20px;
+      border: 1px solid #cfdcc6;
+    }
+
+    .hero-headline {
+      font-size: 2.6rem;
+      font-weight: 800;
+      color: var(--text);
+      margin: 0 auto 18px;
+      max-width: 860px;
+      line-height: 1.2;
+    }
+
+    .hero-headline span { color: var(--olive); }
 
     .banner {
       width: 100%;
@@ -107,6 +144,7 @@
       line-height: 1.75;
     }
 
+    /* ── DOWNLOAD BOX ── */
     .download-box {
       margin: 44px auto 0;
       max-width: 620px;
@@ -129,19 +167,44 @@
       line-height: 1.65;
     }
 
-    .coming-soon {
+    .btn-primary {
       display: inline-block;
       margin-top: 18px;
       background: var(--olive);
       color: #ffffff;
-      padding: 14px 24px;
+      padding: 16px 32px;
       border-radius: 999px;
       font-weight: 700;
+      font-size: 1.05rem;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
     }
 
-    .page-section {
-      margin-top: 104px;
+    .btn-primary:hover {
+      background: #3f5230;
+      transform: translateY(-2px);
     }
+
+    .btn-secondary {
+      display: inline-block;
+      margin-top: 14px;
+      margin-left: 12px;
+      color: var(--olive);
+      padding: 16px 28px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 1.05rem;
+      text-decoration: none;
+      border: 2px solid var(--olive);
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .btn-secondary:hover {
+      background: var(--soft-green);
+    }
+
+    /* ── SECTIONS ── */
+    .page-section { margin-top: 104px; }
 
     .section-title {
       text-align: center;
@@ -159,6 +222,7 @@
       line-height: 1.75;
     }
 
+    /* ── SCREENSHOTS ── */
     .screenshots-grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -198,6 +262,7 @@
       font-size: 0.95rem;
     }
 
+    /* ── FEATURES ── */
     .features-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -213,6 +278,11 @@
       box-shadow: var(--shadow);
     }
 
+    .feature-icon {
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+    }
+
     .feature-card h3 {
       margin: 0 0 12px;
       font-size: 1.28rem;
@@ -226,6 +296,7 @@
       font-size: 1rem;
     }
 
+    /* ── PLANS ── */
     .plans {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -250,17 +321,73 @@
     }
 
     .plan-card h3 {
-      margin: 0 0 14px;
+      margin: 0 0 6px;
       font-size: 1.5rem;
     }
 
+    .plan-price {
+      font-size: 1.05rem;
+      color: var(--olive);
+      font-weight: 700;
+      margin: 0 0 18px;
+    }
+
+    .plan-price span {
+      font-size: 0.9rem;
+      color: var(--muted);
+      font-weight: 400;
+    }
+
     .plan-card ul {
-      margin: 0;
+      margin: 0 0 24px;
       padding-left: 22px;
       color: var(--muted);
       line-height: 1.85;
     }
 
+    /* ── MID-PAGE CTA STRIP ── */
+    .cta-strip {
+      margin-top: 104px;
+      background: linear-gradient(135deg, var(--olive) 0%, var(--sage) 100%);
+      border-radius: 32px;
+      padding: 52px 40px;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .cta-strip h2 {
+      margin: 0 0 14px;
+      font-size: 2rem;
+      color: #ffffff;
+    }
+
+    .cta-strip p {
+      margin: 0 auto 28px;
+      max-width: 580px;
+      font-size: 1.1rem;
+      opacity: 0.9;
+      line-height: 1.65;
+    }
+
+    .btn-white {
+      display: inline-block;
+      background: #ffffff;
+      color: var(--olive);
+      padding: 16px 36px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 1.08rem;
+      text-decoration: none;
+      transition: transform 0.15s, box-shadow 0.15s;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    }
+
+    .btn-white:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.2);
+    }
+
+    /* ── NOTE ── */
     .note {
       margin: 128px auto 0;
       max-width: 940px;
@@ -274,6 +401,7 @@
       box-shadow: var(--shadow);
     }
 
+    /* ── FOOTER ── */
     footer {
       margin-top: 54px;
       padding: 30px 22px;
@@ -291,22 +419,14 @@
       margin: 0 8px;
     }
 
-    footer a:hover {
-      text-decoration: underline;
-    }
+    footer a:hover { text-decoration: underline; }
 
+    /* ── RESPONSIVE ── */
     @media (max-width: 1180px) {
-      main {
-        max-width: 1080px;
-      }
-
-      .screenshots-grid {
-        gap: 18px;
-      }
-
-      .screenshot-card {
-        padding: 12px 12px 20px;
-      }
+      main { max-width: 1080px; }
+      .screenshots-grid { gap: 18px; }
+      .screenshot-card { padding: 12px 12px 20px; }
+      .hero-headline { font-size: 2.2rem; }
     }
 
     @media (max-width: 980px) {
@@ -316,88 +436,38 @@
         margin-left: auto;
         margin-right: auto;
       }
-
-      .features-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .plans {
-        grid-template-columns: 1fr;
-        max-width: 680px;
-      }
+      .features-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .plans { grid-template-columns: 1fr; max-width: 680px; }
+      .hero-headline { font-size: 2rem; }
+      .cta-strip { padding: 40px 28px; }
+      .cta-strip h2 { font-size: 1.7rem; }
     }
 
     @media (max-width: 640px) {
-      header {
-        padding: 22px;
-      }
-
-      .nav {
-        flex-direction: column;
-      }
-
-      nav a {
-        margin: 0 8px;
-      }
-
-      main {
-        padding: 30px 22px 44px;
-      }
-
-      .hero {
-        padding: 14px 0 66px;
-      }
-
-      .banner {
-        border-radius: 22px;
-        margin-bottom: 28px;
-      }
-
-      .subtitle {
-        font-size: 1.05rem;
-      }
-
-      .download-box {
-        margin-top: 34px;
-        padding: 22px;
-      }
-
-      .page-section {
-        margin-top: 76px;
-      }
-
-      .section-title {
-        font-size: 1.72rem;
-      }
-
-      .section-intro {
-        margin-bottom: 34px;
-      }
-
+      header { padding: 22px; }
+      .nav { flex-direction: column; }
+      nav a { margin: 0 8px; }
+      main { padding: 30px 22px 44px; }
+      .hero { padding: 14px 0 66px; }
+      .hero-headline { font-size: 1.7rem; }
+      .banner { border-radius: 22px; margin-bottom: 28px; }
+      .subtitle { font-size: 1.05rem; }
+      .download-box { margin-top: 34px; padding: 22px; }
+      .btn-secondary { margin-left: 0; margin-top: 10px; display: block; text-align: center; }
+      .page-section { margin-top: 76px; }
+      .section-title { font-size: 1.72rem; }
+      .section-intro { margin-bottom: 34px; }
       .screenshots-grid {
         grid-template-columns: 1fr;
         max-width: 340px;
         gap: 26px;
       }
-
-      .features-grid {
-        grid-template-columns: 1fr;
-        gap: 22px;
-      }
-
-      .feature-card,
-      .plan-card,
-      .note {
-        padding: 24px;
-      }
-
-      .note {
-        margin-top: 94px;
-      }
-
-      footer {
-        margin-top: 44px;
-      }
+      .features-grid { grid-template-columns: 1fr; gap: 22px; }
+      .feature-card, .plan-card, .note { padding: 24px; }
+      .note { margin-top: 94px; }
+      footer { margin-top: 44px; }
+      .cta-strip { padding: 36px 22px; border-radius: 22px; }
+      .cta-strip h2 { font-size: 1.5rem; }
     }
   </style>
 </head>
@@ -409,7 +479,6 @@
         <img src="assets/squiggles3.png" alt="SquigglesTech LLC logo" />
         <span>SquigglesTech LLC</span>
       </a>
-
       <nav>
         <a href="index.html#apps">Our Apps</a>
         <a href="privacy-policy.html">Privacy</a>
@@ -419,140 +488,149 @@
   </header>
 
   <main>
+
+    <!-- HERO -->
     <section class="hero">
+      <div class="hero-eyebrow">Now Available on Google Play</div>
+      <h1 class="hero-headline">Stop Wasting Food.<br /><span>Start Eating Smarter.</span></h1>
+
       <img class="banner" src="assets/Banner1024x500.png" alt="My Kitchen Pantry app banner" />
 
       <p class="subtitle">
-        Organize your pantry, plan meals, build shopping lists, manage recipes,
-        and reduce food waste with a simple kitchen companion app.
+        My Kitchen Pantry helps you track what's in your kitchen, plan meals around what you already have,
+        build smarter shopping lists, and cut down on food waste — all from one simple app.
       </p>
 
       <div class="download-box">
-        <strong>Coming soon on Google Play</strong>
-        <p>
-          My Kitchen Pantry is in the final Google Play launch process.
-          The download link will be added here once the public listing is live.
-        </p>
-        <span class="coming-soon">Google Play link coming soon</span>
+        <strong>Free to Download on Google Play</strong>
+        <p>Start organizing your kitchen today. Upgrade to Pro anytime for advanced features.</p>
+        <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.squigglestech.mykitchenpantry" target="_blank" rel="noopener">
+          ⬇ Download Free on Google Play
+        </a>
+        <a class="btn-secondary" href="#plans">See Pro Features</a>
       </div>
     </section>
 
+    <!-- WHAT IS IT -->
     <section class="page-section">
       <h2 class="section-title">What is My Kitchen Pantry?</h2>
       <p class="section-intro">
-        My Kitchen Pantry is a home kitchen organizer that helps you keep track of
-        what you have, plan meals around your pantry, create shopping lists, and
-        stay more aware of expiration dates and allergy needs.
+        A simple, no-fuss kitchen companion for everyday households. Know what you have,
+        plan what you'll eat, shop only what you need, and stop throwing money in the trash.
       </p>
     </section>
 
+    <!-- SCREENSHOTS -->
     <section class="page-section">
       <h2 class="section-title">See the app in action</h2>
       <p class="section-intro">
-        A quick look at the main screens that help you organize food, plan meals,
-        and shop with less guesswork.
+        Clean screens designed to make kitchen life easier — not more complicated.
       </p>
 
       <div class="screenshots-grid">
         <article class="screenshot-card">
           <img src="assets/Home1080x1920.png" alt="My Kitchen Pantry home dashboard screen" />
-          <h3>Start from your kitchen dashboard</h3>
-          <p>See your pantry, meals, shopping, recipes, allergies, and account tools from one simple home screen.</p>
+          <h3>Your kitchen at a glance</h3>
+          <p>Everything you need — pantry, meals, shopping, recipes, and more — from one clean home screen.</p>
         </article>
 
         <article class="screenshot-card">
           <img src="assets/Pantry1080x1920.png" alt="My Kitchen Pantry pantry tracking screen" />
-          <h3>Track what you have</h3>
-          <p>Keep up with pantry items, quantities, categories, and expiration dates.</p>
+          <h3>Know what you have</h3>
+          <p>Track items, quantities, categories, and expiration dates so nothing gets forgotten in the back of a cabinet.</p>
         </article>
 
         <article class="screenshot-card">
           <img src="assets/MealPlan1080x1920.png" alt="My Kitchen Pantry meal planning screen" />
-          <h3>Plan meals with awareness</h3>
-          <p>Organize meals for the week and, with Pro, see allergy warnings while planning.</p>
+          <h3>Plan meals with confidence</h3>
+          <p>Organize your week around what's already in your pantry. Pro adds allergy-aware meal planning.</p>
         </article>
 
         <article class="screenshot-card">
           <img src="assets/Shopping1080x1920.png" alt="My Kitchen Pantry shopping list screen" />
-          <h3>Build shopping lists</h3>
-          <p>Add items, adjust quantities, share your list, and keep grocery planning organized.</p>
+          <h3>Shop smarter, not harder</h3>
+          <p>Build lists, adjust quantities, and share with your household — no more guessing at the store.</p>
         </article>
       </div>
     </section>
 
+    <!-- FEATURES -->
     <section class="page-section">
-      <h2 class="section-title">What it helps you do</h2>
+      <h2 class="section-title">Everything your kitchen needs</h2>
 
       <div class="features-grid">
         <article class="feature-card">
-          <h3>Track your pantry</h3>
-          <p>
-            Keep up with pantry items, quantities, categories, and expiration dates
-            so you know what you already have.
-          </p>
+          <div class="feature-icon">🥫</div>
+          <h3>Pantry Tracking</h3>
+          <p>Know exactly what you have — quantities, categories, and expiration dates — before you buy more of something you already own.</p>
         </article>
 
         <article class="feature-card">
-          <h3>Plan meals</h3>
-          <p>
-            Add meals to your weekly plan, organize dinners ahead of time, and keep
-            your kitchen routine easier to manage.
-          </p>
+          <div class="feature-icon">📅</div>
+          <h3>Meal Planning</h3>
+          <p>Plan your week ahead of time so dinner isn't a daily scramble. Build routines that actually work with your pantry.</p>
         </article>
 
         <article class="feature-card">
-          <h3>Build shopping lists</h3>
-          <p>
-            Create shopping lists, adjust quantities, share your list, and keep track
-            of what still needs to be picked up.
-          </p>
+          <div class="feature-icon">🛒</div>
+          <h3>Smart Shopping Lists</h3>
+          <p>Build lists based on what you need, not what you think you need. Share with your household and check off as you go.</p>
         </article>
 
         <article class="feature-card">
-          <h3>Use recipe ideas</h3>
-          <p>
-            Browse recipes, view ingredients, and use pantry-aware tools to help turn
-            what you have into meal ideas.
-          </p>
+          <div class="feature-icon">📖</div>
+          <h3>Recipe Management</h3>
+          <p>Browse recipes, save your favorites, and use pantry-aware tools to turn what you already have into tonight's dinner.</p>
         </article>
 
         <article class="feature-card">
-          <h3>Reduce food waste</h3>
-          <p>
-            Expiration labels and pantry visibility help you use food before it goes
-            bad and avoid buying duplicates.
-          </p>
+          <div class="feature-icon">♻️</div>
+          <h3>Reduce Food Waste</h3>
+          <p>Expiration alerts and pantry visibility help you use food before it spoils — saving money every single week.</p>
         </article>
 
         <article class="feature-card">
-          <h3>Allergy awareness with Pro</h3>
-          <p>
-            Pro unlocks allergy tracking and allergy warnings across recipes and meal
-            planning tools.
-          </p>
+          <div class="feature-icon">⚠️</div>
+          <h3>Allergy Awareness (Pro)</h3>
+          <p>Pro unlocks full allergy tracking with warnings across recipes and meal planning — peace of mind for every household member.</p>
         </article>
       </div>
     </section>
 
-    <section class="page-section">
+    <!-- MID-PAGE CTA STRIP -->
+    <div class="cta-strip">
+      <h2>Your kitchen deserves better than guesswork.</h2>
+      <p>Join households already using My Kitchen Pantry to save time, reduce waste, and make meal planning stress-free.</p>
+      <a class="btn-white" href="https://play.google.com/store/apps/details?id=com.squigglestech.mykitchenpantry" target="_blank" rel="noopener">
+        ⬇ Get It Free on Google Play
+      </a>
+    </div>
+
+    <!-- PLANS -->
+    <section class="page-section" id="plans">
       <h2 class="section-title">Free and Pro</h2>
+      <p class="section-intro">Start free and upgrade when you're ready. No pressure, no tricks.</p>
 
       <div class="plans">
         <article class="plan-card">
           <h3>Free</h3>
+          <p class="plan-price">Always free <span>— no credit card needed</span></p>
           <ul>
             <li>Manual pantry tracking</li>
-            <li>Shopping list tools for everyday planning</li>
+            <li>Shopping list tools</li>
             <li>Recipe browsing and saving</li>
             <li>Meal planning basics</li>
             <li>Local use on one device</li>
-            <li>Simple tools for everyday kitchen planning</li>
+            <li>Simple everyday kitchen tools</li>
           </ul>
+          <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.squigglestech.mykitchenpantry" target="_blank" rel="noopener">Download Free</a>
         </article>
 
         <article class="plan-card pro">
-          <h3>Pro</h3>
+          <h3>Pro ✨</h3>
+          <p class="plan-price">$4.99/month <span>or $39.99/year (save 33%)</span></p>
           <ul>
+            <li>Everything in Free</li>
             <li>Unlimited shopping list space</li>
             <li>Cross-device sync</li>
             <li>Barcode scanning and product lookup</li>
@@ -560,16 +638,18 @@
             <li>Allergy tracking and warnings</li>
             <li>Advanced meal planning tools</li>
           </ul>
+          <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.squigglestech.mykitchenpantry" target="_blank" rel="noopener">Start with Free — Upgrade Anytime</a>
         </article>
       </div>
     </section>
 
     <section class="note">
       <p>
-        My Kitchen Pantry is designed for everyday households that want a cleaner,
-        simpler way to manage food at home without overcomplicating the kitchen.
+        My Kitchen Pantry is built for real households — not professional chefs, not meal-prep influencers.
+        Just people who want a simpler, smarter way to manage what's in their kitchen without overcomplicating it.
       </p>
     </section>
+
   </main>
 
   <footer>
