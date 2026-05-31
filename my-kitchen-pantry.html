@@ -7,8 +7,6 @@
   <meta name="description" content="My Kitchen Pantry helps you track pantry inventory, plan meals, build shopping lists, manage recipes, and reduce food waste. Free to download on Google Play." />
   <meta name="keywords" content="pantry organizer app, meal planning app, shopping list app, food waste app, kitchen organizer, Android pantry app, recipe manager, expiration date tracker" />
   <meta name="author" content="SquigglesTech LLC" />
-
-  <!-- Open Graph (for social sharing previews) -->
   <meta property="og:title" content="My Kitchen Pantry – Stop Wasting Food. Start Eating Smarter." />
   <meta property="og:description" content="Track your pantry, plan meals, build shopping lists, and reduce food waste. Free on Google Play." />
   <meta property="og:image" content="https://squigglestech.com/assets/Banner1024x500.png" />
@@ -41,7 +39,6 @@
       min-height: 100vh;
     }
 
-    /* ── HEADER ── */
     header {
       padding: 24px 28px;
       border-bottom: 1px solid var(--border);
@@ -87,14 +84,12 @@
 
     nav a:hover { color: var(--olive); }
 
-    /* ── MAIN ── */
     main {
       max-width: 1440px;
       margin: 0 auto;
       padding: 48px 34px 56px;
     }
 
-    /* ── HERO ── */
     .hero {
       text-align: center;
       padding: 18px 0 92px;
@@ -144,7 +139,6 @@
       line-height: 1.75;
     }
 
-    /* ── DOWNLOAD BOX ── */
     .download-box {
       margin: 44px auto 0;
       max-width: 620px;
@@ -199,11 +193,8 @@
       transition: background 0.2s, color 0.2s;
     }
 
-    .btn-secondary:hover {
-      background: var(--soft-green);
-    }
+    .btn-secondary:hover { background: var(--soft-green); }
 
-    /* ── SECTIONS ── */
     .page-section { margin-top: 104px; }
 
     .section-title {
@@ -222,7 +213,6 @@
       line-height: 1.75;
     }
 
-    /* ── SCREENSHOTS ── */
     .screenshots-grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -262,7 +252,6 @@
       font-size: 0.95rem;
     }
 
-    /* ── FEATURES ── */
     .features-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -296,7 +285,6 @@
       font-size: 1rem;
     }
 
-    /* ── PLANS ── */
     .plans {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -345,7 +333,6 @@
       line-height: 1.85;
     }
 
-    /* ── MID-PAGE CTA STRIP ── */
     .cta-strip {
       margin-top: 104px;
       background: linear-gradient(135deg, var(--olive) 0%, var(--sage) 100%);
@@ -387,7 +374,6 @@
       box-shadow: 0 12px 32px rgba(0,0,0,0.2);
     }
 
-    /* ── NOTE ── */
     .note {
       margin: 128px auto 0;
       max-width: 940px;
@@ -401,7 +387,6 @@
       box-shadow: var(--shadow);
     }
 
-    /* ── FOOTER ── */
     footer {
       margin-top: 54px;
       padding: 30px 22px;
@@ -421,7 +406,6 @@
 
     footer a:hover { text-decoration: underline; }
 
-    /* ── RESPONSIVE ── */
     @media (max-width: 1180px) {
       main { max-width: 1080px; }
       .screenshots-grid { gap: 18px; }
@@ -457,11 +441,7 @@
       .page-section { margin-top: 76px; }
       .section-title { font-size: 1.72rem; }
       .section-intro { margin-bottom: 34px; }
-      .screenshots-grid {
-        grid-template-columns: 1fr;
-        max-width: 340px;
-        gap: 26px;
-      }
+      .screenshots-grid { grid-template-columns: 1fr; max-width: 340px; gap: 26px; }
       .features-grid { grid-template-columns: 1fr; gap: 22px; }
       .feature-card, .plan-card, .note { padding: 24px; }
       .note { margin-top: 94px; }
@@ -489,29 +469,22 @@
 
   <main>
 
-    <!-- HERO -->
     <section class="hero">
       <div class="hero-eyebrow">Now Available on Google Play</div>
       <h1 class="hero-headline">Stop Wasting Food.<br /><span>Start Eating Smarter.</span></h1>
-
       <img class="banner" src="assets/Banner1024x500.png" alt="My Kitchen Pantry app banner" />
-
       <p class="subtitle">
         My Kitchen Pantry helps you track what's in your kitchen, plan meals around what you already have,
         build smarter shopping lists, and cut down on food waste — all from one simple app.
       </p>
-
       <div class="download-box">
         <strong>Free to Download on Google Play</strong>
         <p>Start organizing your kitchen today. Upgrade to Pro anytime for advanced features.</p>
-        <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.squigglestech.mykitchenpantry" target="_blank" rel="noopener">
-          ⬇ Download Free on Google Play
-        </a>
+        <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.squigglestech.mykitchenpantry" target="_blank" rel="noopener">⬇ Download Free on Google Play</a>
         <a class="btn-secondary" href="#plans">See Pro Features</a>
       </div>
     </section>
 
-    <!-- WHAT IS IT -->
     <section class="page-section">
       <h2 class="section-title">What is My Kitchen Pantry?</h2>
       <p class="section-intro">
@@ -520,32 +493,25 @@
       </p>
     </section>
 
-    <!-- SCREENSHOTS -->
     <section class="page-section">
       <h2 class="section-title">See the app in action</h2>
-      <p class="section-intro">
-        Clean screens designed to make kitchen life easier — not more complicated.
-      </p>
-
+      <p class="section-intro">Clean screens designed to make kitchen life easier — not more complicated.</p>
       <div class="screenshots-grid">
         <article class="screenshot-card">
           <img src="assets/Home1080x1920.png" alt="My Kitchen Pantry home dashboard screen" />
           <h3>Your kitchen at a glance</h3>
           <p>Everything you need — pantry, meals, shopping, recipes, and more — from one clean home screen.</p>
         </article>
-
         <article class="screenshot-card">
           <img src="assets/Pantry1080x1920.png" alt="My Kitchen Pantry pantry tracking screen" />
           <h3>Know what you have</h3>
           <p>Track items, quantities, categories, and expiration dates so nothing gets forgotten in the back of a cabinet.</p>
         </article>
-
         <article class="screenshot-card">
           <img src="assets/MealPlan1080x1920.png" alt="My Kitchen Pantry meal planning screen" />
           <h3>Plan meals with confidence</h3>
           <p>Organize your week around what's already in your pantry. Pro adds allergy-aware meal planning.</p>
         </article>
-
         <article class="screenshot-card">
           <img src="assets/Shopping1080x1920.png" alt="My Kitchen Pantry shopping list screen" />
           <h3>Shop smarter, not harder</h3>
@@ -554,41 +520,34 @@
       </div>
     </section>
 
-    <!-- FEATURES -->
     <section class="page-section">
       <h2 class="section-title">Everything your kitchen needs</h2>
-
       <div class="features-grid">
         <article class="feature-card">
           <div class="feature-icon">🥫</div>
           <h3>Pantry Tracking</h3>
           <p>Know exactly what you have — quantities, categories, and expiration dates — before you buy more of something you already own.</p>
         </article>
-
         <article class="feature-card">
           <div class="feature-icon">📅</div>
           <h3>Meal Planning</h3>
           <p>Plan your week ahead of time so dinner isn't a daily scramble. Build routines that actually work with your pantry.</p>
         </article>
-
         <article class="feature-card">
           <div class="feature-icon">🛒</div>
           <h3>Smart Shopping Lists</h3>
           <p>Build lists based on what you need, not what you think you need. Share with your household and check off as you go.</p>
         </article>
-
         <article class="feature-card">
           <div class="feature-icon">📖</div>
           <h3>Recipe Management</h3>
           <p>Browse recipes, save your favorites, and use pantry-aware tools to turn what you already have into tonight's dinner.</p>
         </article>
-
         <article class="feature-card">
           <div class="feature-icon">♻️</div>
           <h3>Reduce Food Waste</h3>
           <p>Expiration alerts and pantry visibility help you use food before it spoils — saving money every single week.</p>
         </article>
-
         <article class="feature-card">
           <div class="feature-icon">⚠️</div>
           <h3>Allergy Awareness (Pro)</h3>
@@ -597,20 +556,15 @@
       </div>
     </section>
 
-    <!-- MID-PAGE CTA STRIP -->
     <div class="cta-strip">
       <h2>Your kitchen deserves better than guesswork.</h2>
       <p>Join households already using My Kitchen Pantry to save time, reduce waste, and make meal planning stress-free.</p>
-      <a class="btn-white" href="https://play.google.com/store/apps/details?id=com.squigglestech.mykitchenpantry" target="_blank" rel="noopener">
-        ⬇ Get It Free on Google Play
-      </a>
+      <a class="btn-white" href="https://play.google.com/store/apps/details?id=com.squigglestech.mykitchenpantry" target="_blank" rel="noopener">⬇ Get It Free on Google Play</a>
     </div>
 
-    <!-- PLANS -->
     <section class="page-section" id="plans">
       <h2 class="section-title">Free and Pro</h2>
       <p class="section-intro">Start free and upgrade when you're ready. No pressure, no tricks.</p>
-
       <div class="plans">
         <article class="plan-card">
           <h3>Free</h3>
@@ -625,7 +579,6 @@
           </ul>
           <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.squigglestech.mykitchenpantry" target="_blank" rel="noopener">Download Free</a>
         </article>
-
         <article class="plan-card pro">
           <h3>Pro ✨</h3>
           <p class="plan-price">$4.99/month <span>or $39.99/year (save 33%)</span></p>
@@ -635,10 +588,12 @@
             <li>Cross-device sync</li>
             <li>Barcode scanning and product lookup</li>
             <li>Smart recipe help from pantry items</li>
+            <li>Missing-ingredient shopping help</li>
             <li>Allergy tracking and warnings</li>
-            <li>Advanced meal planning tools</li>
+            <li>Expanded meal planning support</li>
+            <li>Account-based cloud access</li>
           </ul>
-          <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.squigglestech.mykitchenpantry" target="_blank" rel="noopener">Start with Free — Upgrade Anytime</a>
+          <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.squigglestech.mykitchenpantry" target="_blank" rel="noopener">Start Free — Upgrade Anytime</a>
         </article>
       </div>
     </section>
