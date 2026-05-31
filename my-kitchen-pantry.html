@@ -285,6 +285,7 @@
       font-size: 1rem;
     }
 
+    /* ── PLANS — buttons pinned to bottom ── */
     .plans {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -301,6 +302,8 @@
       border-radius: 28px;
       padding: 32px;
       box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
     }
 
     .plan-card.pro {
@@ -331,6 +334,12 @@
       padding-left: 22px;
       color: var(--muted);
       line-height: 1.85;
+      flex: 1;
+    }
+
+    .plan-card .btn-primary {
+      align-self: flex-start;
+      margin-top: auto;
     }
 
     .cta-strip {
