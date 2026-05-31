@@ -152,6 +152,15 @@
       color: var(--text);
     }
 
+    .section-intro {
+      max-width: 720px;
+      margin: -8px auto 26px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
     .features-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -178,6 +187,45 @@
       color: var(--muted);
       line-height: 1.6;
       font-size: 0.98rem;
+    }
+
+    .screenshots-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 22px;
+      margin-top: 22px;
+    }
+
+    .screenshot-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 26px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .screenshot-card img {
+      width: 100%;
+      max-width: 260px;
+      height: auto;
+      border-radius: 24px;
+      border: 1px solid var(--border);
+      box-shadow: 0 12px 28px rgba(31, 41, 51, 0.12);
+      background: var(--cream);
+    }
+
+    .screenshot-card h3 {
+      margin: 18px 0 8px;
+      font-size: 1.12rem;
+      color: var(--text);
+    }
+
+    .screenshot-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.55;
+      font-size: 0.95rem;
     }
 
     .plans {
@@ -264,6 +312,7 @@
 
       .download-box,
       .feature-card,
+      .screenshot-card,
       .plan-card,
       .note {
         padding: 20px;
@@ -306,6 +355,48 @@
           The download link will be added here once the public listing is live.
         </p>
         <span class="coming-soon">Google Play link coming soon</span>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">What is My Kitchen Pantry?</h2>
+      <p class="section-intro">
+        My Kitchen Pantry is a home kitchen organizer that helps you keep track of
+        what you have, plan meals around your pantry, create shopping lists, and
+        stay more aware of expiration dates and allergy needs.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="section-title">See the app in action</h2>
+      <p class="section-intro">
+        A quick look at pantry tracking, meal planning, shopping lists, and the home dashboard.
+      </p>
+
+      <div class="screenshots-grid">
+        <article class="screenshot-card">
+          <img src="assets/Home1080x1920.png" alt="My Kitchen Pantry home dashboard screen" />
+          <h3>Start from your kitchen dashboard</h3>
+          <p>See your pantry, meals, shopping, recipes, allergies, and account tools from one simple home screen.</p>
+        </article>
+
+        <article class="screenshot-card">
+          <img src="assets/Pantry1080x1920.png" alt="My Kitchen Pantry pantry tracking screen" />
+          <h3>Track what you have</h3>
+          <p>Keep up with pantry items, quantities, categories, and expiration dates.</p>
+        </article>
+
+        <article class="screenshot-card">
+          <img src="assets/MealPlan1080x1920.png" alt="My Kitchen Pantry meal planning screen" />
+          <h3>Plan meals with awareness</h3>
+          <p>Organize meals for the week and, with Pro, see allergy warnings while planning.</p>
+        </article>
+
+        <article class="screenshot-card">
+          <img src="assets/Shopping1080x1920.png" alt="My Kitchen Pantry shopping list screen" />
+          <h3>Build shopping lists</h3>
+          <p>Add items, adjust quantities, share your list, and keep grocery planning organized.</p>
+        </article>
       </div>
     </section>
 
@@ -368,28 +459,28 @@
 
       <div class="plans">
         <article class="plan-card">
-  <h3>Free</h3>
-  <ul>
-    <li>Manual pantry tracking</li>
-    <li>Shopping list tools for everyday planning</li>
-    <li>Recipe browsing and saving</li>
-    <li>Meal planning basics</li>
-    <li>Local use on one device</li>
-    <li>Simple tools for everyday kitchen planning</li>
-  </ul>
-</article>
+          <h3>Free</h3>
+          <ul>
+            <li>Manual pantry tracking</li>
+            <li>Shopping list tools for everyday planning</li>
+            <li>Recipe browsing and saving</li>
+            <li>Meal planning basics</li>
+            <li>Local use on one device</li>
+            <li>Simple tools for everyday kitchen planning</li>
+          </ul>
+        </article>
 
         <article class="plan-card pro">
-  <h3>Pro</h3>
-  <ul>
-    <li>Unlimited shopping list space</li>
-    <li>Cross-device sync</li>
-    <li>Barcode scanning and product lookup</li>
-    <li>Smart recipe help from pantry items</li>
-    <li>Allergy tracking and warnings</li>
-    <li>Advanced meal planning tools</li>
-  </ul>
-</article>
+          <h3>Pro</h3>
+          <ul>
+            <li>Unlimited shopping list space</li>
+            <li>Cross-device sync</li>
+            <li>Barcode scanning and product lookup</li>
+            <li>Smart recipe help from pantry items</li>
+            <li>Allergy tracking and warnings</li>
+            <li>Advanced meal planning tools</li>
+          </ul>
+        </article>
       </div>
     </section>
 
